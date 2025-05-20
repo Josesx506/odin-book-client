@@ -104,6 +104,13 @@
     justify-content: flex-end;
 }
 
+.expCntr {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    overflow: hidden;
+}
+
 .expandText {
     appearance: none;
     padding: 0.5em;
@@ -121,6 +128,7 @@
     content: "Show More";
 }
 
+.expCntr, 
 .expandText:checked::before {
     content: "Show Less";
     visibility: hidden;
@@ -128,7 +136,7 @@
     padding: 0;
 }
 
-.postBodyText:has(+ div>.expandText:checked) {
+.postBodyText:has(+ .expCntr>.expandText:checked) {
     max-height: unset;
     height: auto;
 }

@@ -39,7 +39,9 @@ export default function PostThumbnailCard({ post }) {
           </div>
           <Link href={`/feed/${post.id}`}>
             <div ref={postBodyRef} className={styles.postBodyText}>{post.body}</div>
-            <div>{(post.body && showToggle) && <input onClick={onClick} className={styles.expandText} type='checkbox' />}</div>
+            <div className={styles.expCntr}>
+              {(post.body && showToggle) && <input onClick={onClick} className={styles.expandText} type='checkbox' />}
+            </div>
             {post.postimg &&
               <div className={styles.thmbnlPostImage}>
                 <img src={post.postimg}></img>

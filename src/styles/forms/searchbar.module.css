@@ -1,0 +1,42 @@
+.searchCntr {
+    display: grid;
+    gap: 0.1em;
+    position: relative;
+}
+
+.searchInputCntr {
+    display: flex;
+    align-items: center;
+    padding: 0.3em 0.6em;
+    border-radius: 1em;
+    border: 1px solid lightgray;
+    &:active,
+    &:focus {
+        border: 1px solid rgb(36, 158, 240);
+    }
+}
+
+.searchInputCntr input {
+    width: 100%;
+    border: 0;
+    font-size: 1rem;
+    font-family: 'Montserrat';
+    &:focus {
+        outline: none;
+    }
+}
+
+.searchRstsCntr {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 0.3em;
+    width: 100%;
+    top: 100%;
+    margin-top: 0.5em;
+    z-index: 1;
+    max-height: min(70vh, 300px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+}

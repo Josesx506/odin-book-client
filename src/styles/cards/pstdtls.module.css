@@ -1,0 +1,33 @@
+.postCntr {
+    display: grid;
+    gap: 0.5em;
+    padding: 0 1em;
+}
+
+.postbody {
+    line-height: 1.25;
+}
+
+.postFooter {
+    font-size: 0.95rem;
+    color: rgb(92, 92, 92);
+    & span {
+        color: black;
+        font-weight: bold;
+    }
+}
+
+.line {
+    border-bottom: 0.5px solid lightgray;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.postimage {
+    width: 100%;
+    overflow: hidden;
+    & img {
+        object-fit: contain;
+        max-width: 100%;
+    }
+}

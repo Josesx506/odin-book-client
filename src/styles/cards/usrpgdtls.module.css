@@ -1,0 +1,88 @@
+.prfDtlsCntr {
+    display: grid;
+    border-bottom: 1px solid darkgray;
+}
+
+.bkgrdImg {
+    width: 100%;
+    height: 6em;
+    background-color: lightgray;
+}
+
+.prfImgHldr {
+    position: relative;
+}
+
+.prfImgCntr {
+    position: absolute;
+    top: -60px;
+    left: 5%;
+    transform: translateX(-5%);
+    width: 120px;
+    height: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+    & img {
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+}
+
+.prfSummary {
+    display: grid;
+    padding: 0.75em;
+    gap: 0.75em;
+}
+
+.prfEditbtn {
+    padding: 0 1em 3em;
+    display: flex;
+    position: relative;
+    & button {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.names {
+    color: rgb(92, 92, 92);
+    & h3 {
+        color: black;
+        padding-bottom: 0.3em;
+    }
+    & div {
+        text-transform: lowercase;
+    }
+}
+
+.locationTimeline {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    & div {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
+}
+
+.friends {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(92, 92, 92);
+
+    & a>span {
+        font-weight: bold;
+        color: black;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}

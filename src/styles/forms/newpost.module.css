@@ -1,0 +1,24 @@
+.postCntr {
+    display: flex;
+    gap: 0.5em;
+    padding: 0.2em 0.5em;
+    border-bottom: 1px solid lightgray;
+}
+
+.avatarCntr {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    & img {
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+    &:hover {
+        cursor: pointer;
+        opacity: 0.85;
+    }
+}

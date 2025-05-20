@@ -1,0 +1,58 @@
+.result {
+    margin: 0 0.7em;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(247,247,247);
+    }
+}
+
+.result + .result {
+    border-top: 1px solid lightgray;
+    padding-top: 0.3em;
+}
+
+.post span {
+    font-style: italic;
+    font-family: 'Monteserrat';
+}
+
+.post div {
+    --max-lines: 3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+}
+
+.user a {
+    display: flex;
+    gap: 0.5em;
+}
+
+.userAvatar {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    & img {
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+}
+
+.userBody {
+    display: grid;
+    gap: 0.2em;
+    color: darkgray;
+}
+
+.fullname {
+    font-weight: 600;
+    color: black;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

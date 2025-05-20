@@ -1,0 +1,59 @@
+.homeCntr {
+    display: flex;
+    padding: 0.5em 1em;
+    gap: 3em;
+    grid-row: 2;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+.textCntr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.description {
+    color: #7b7b7b;
+    font-size: 1.2em;
+    margin: 0;
+    max-width: 400px;
+    & svg {
+        vertical-align: middle;
+        margin-left: 0.1em;
+    }
+}
+
+.buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-top: 1em;
+}
+
+.githubLink {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.demo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 650px) {
+    .homeCntr {
+        flex-direction: column;
+        /* justify-content: center; */
+        margin-top: 2em;
+    }
+}

@@ -1,0 +1,63 @@
+.profileCntr {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: min(85vw, 400px);
+    margin: 4em auto 0;
+    border: 1px solid lightgray;
+    border-radius: 0.5em;
+    padding: 5em 1em 1em;
+    position: relative;
+}
+
+.uploadImgIcon, .profileImg {
+    width: 120px;
+    height: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & img {
+        max-width: 100%;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        object-fit: cover;
+    }
+
+    &:hover {
+        opacity: 0.75;
+        cursor: pointer;
+    }
+}
+
+.uploadImgIcon {
+    background-color: transparent;
+    color: white;
+    & svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.profileForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    & div > label {
+        font-weight: 600;
+    }
+}
+
+.updateProfile {
+    display: flex;
+    justify-content: center;
+    padding: 0.3em 0;
+}

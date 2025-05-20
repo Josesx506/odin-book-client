@@ -1,0 +1,76 @@
+.scrollbarMain {
+  display: flex;
+  padding-top: 1em;
+  flex-direction: column;
+  border-left: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.doubleScroller {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  gap: 0.5em;
+  padding-top: 0.5em;
+  border-left: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+}
+
+.innerScroller {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.scrollbarMain::-webkit-scrollbar,
+.innerScroller::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbarMain::-webkit-scrollbar-thumb,
+.innerScroller::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+  border-radius: 3px;
+}
+
+.scrollbarMain::-webkit-scrollbar-track,
+.innerScroller::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.spinCntr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1;
+  border: 3px solid rgb(36, 158, 240);;
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg) }
+}
+
+@media (max-width: 1025px) {
+    .scrollbarMain, .doubleScroller {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 639px) {
+    .scrollbarMain, .doubleScroller {
+        height: 94vh;
+    }
+}

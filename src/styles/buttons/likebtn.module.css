@@ -1,0 +1,19 @@
+.cmpStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    color: darkgray;
+    &:hover {
+        color: rgb(249, 24, 128);
+        cursor: pointer;
+    }
+}
+
+.iconLike {
+    color: rgb(249, 24, 128);
+}
+
+.textLike {
+    color: rgb(249, 24, 128);
+}

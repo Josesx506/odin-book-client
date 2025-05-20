@@ -1,0 +1,29 @@
+.rightAside {
+    display: grid;
+    align-content: flex-start;
+    gap: 2em;
+    padding: 1em 0.5em;
+    margin-left: 1em;
+    overflow: hidden;
+    grid-template-rows: auto auto 1fr;
+}
+
+.footer {
+    align-self: last baseline;
+    display: grid;
+    gap: 1em;
+    color: rgb(92, 92, 92);;
+}
+
+.contactDetails {
+    display: flex;
+    gap: 0.3em;
+}
+
+.contactDetails > a {
+    font-style: oblique;
+    &:hover {
+        text-decoration: underline;
+        color: black;
+    }
+}

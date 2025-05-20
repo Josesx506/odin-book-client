@@ -1,0 +1,27 @@
+.profileNav {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    width: 100%;
+    padding-left: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.backBtn {
+    width: 2em;
+    height: 2em;
+    aspect-ratio: 1;
+    padding: 0.3em;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(231, 231, 232);
+    }
+}
+
+.navBody {
+    cursor: pointer;
+    & div {
+        color: rgb(92, 92, 92);
+    }
+}

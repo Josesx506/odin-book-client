@@ -1,0 +1,50 @@
+.navbar {
+    display: grid;
+    align-content: flex-start;
+    grid-template-rows: auto auto 1fr;
+    gap: 0.5em;
+    padding: 1em 0.5em;
+}
+
+.linkCntr {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.navLink {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.2rem;
+    font-weight: 550;
+    font-family: 'Poppins';
+}
+
+.navLink.active {
+    color: var(--accent-clr);
+}
+
+@media (max-width: 639px) {
+    .mobileNav {
+        grid-row: 2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5em 0em;
+        gap: 1em;
+        border-top: 1px solid darkgray;
+    }
+
+    .mobNavLink svg {
+        width: 150%;
+        height: 150%;
+        cursor: pointer;
+    }
+
+    .mobNavLink.active svg {
+        color: var(--accent-clr);
+    }
+}

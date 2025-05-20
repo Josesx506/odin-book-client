@@ -1,0 +1,85 @@
+.postForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    padding: 0.2em 0.3em;
+    width: 100%;
+}
+
+.textCounter {
+    position: relative;
+}
+
+.postInput {
+    width: 100%;
+    font-size: 1rem;
+    border: 0;
+    padding: 0.4em 0.4em;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    resize: none;
+    &:focus {
+        outline: none;
+        border-bottom: 0.5px solid lightgray;
+    }
+}
+
+.characterCount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.8rem;
+    color: gray;
+    text-align: right;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.characterCount.warning {
+    color: orange;
+}
+
+.characterCount.error {
+    color: red;
+}
+
+.actionBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attachments {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    align-items: center;
+}
+
+.newIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        aspect-ratio: 1;
+        color: rgb(36, 158, 240);
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.submitBtn {
+    display: flex;
+    align-items: center;
+    background-color: darkgray;
+    padding: 0.3em 1em;
+    border-radius: 2em;
+    color: white;
+    font-weight: bold;
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,11 @@
+.cmpStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    color: darkgray;
+    &:hover {
+        color: rgb(29, 155, 240);
+        cursor: pointer;
+    }
+}

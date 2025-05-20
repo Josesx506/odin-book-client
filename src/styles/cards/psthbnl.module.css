@@ -1,0 +1,151 @@
+.mainCntr {
+    display: grid;
+}
+
+.mainCntr + .mainCntr::before {
+    content: '';
+    width: 100%;
+    border-top: 1px solid darkgray;
+    margin: 0 auto;
+}
+
+.thmbnlCntr {
+    display: flex;
+    gap: 0.75em;
+    align-items: flex-start;
+    padding: 1em 0.4em;
+    transition: background-color 0.2s ease-in-out;
+    width: 100%;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(247,247,247)
+    }
+}
+
+.authorAvatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    & img {
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+    &:hover {
+        cursor: pointer;
+        opacity: 0.85;
+    }
+}
+
+.postBody {
+    display: grid;
+    gap: 0.3em;
+    width: 100%;
+}
+
+.thmbnlTitle {
+    display: flex;
+    gap: 0.5em;
+    color: rgb(71, 71, 71);
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fullname {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 40%;
+
+    &:hover {
+        text-shadow: 0 0 1.0px currentColor;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.username {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 40%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.postBodyText {
+    --max-lines: 3;
+    --line-height: 1.2;
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+    overflow: hidden;
+    position: relative;
+}
+
+.postBodyText:has(+ .expandText:not(:checked))::before {
+    content: "";
+    position: absolute;
+    height: calc(0.75em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, white);
+}
+
+.postBodyText + div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.expandText {
+    appearance: none;
+    padding: 0.5em;
+    cursor: pointer;
+    color: rgb(36, 158, 240);
+    display: block;
+    margin-left: auto;
+}
+
+.expandText:hover {
+    background-color: rgb(247,247,247);
+    text-decoration: underline;
+}
+
+.expandText::before {
+    content: "Show More";
+}
+
+.expandText:checked::before {
+    content: "Show Less";
+    visibility: hidden;
+    display: none;
+    padding: 0;
+}
+
+.postBodyText:has(+ .expandText:checked) {
+    max-height: unset;
+    height: auto;
+}
+
+.postedAt {
+    display: flex;
+    gap: 0.3em;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.thmbnlPostImage {
+    width: 100%;
+    overflow: hidden;
+    & img {
+        object-fit: contain;
+        max-width: 100%;
+    }
+}

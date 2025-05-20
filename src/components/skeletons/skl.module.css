@@ -1,0 +1,21 @@
+.mainSkl {
+    display: flex;
+    padding-top: 1em;
+    flex-direction: column;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    height: 100vh;
+    gap: 0.5em;
+}
+
+@media (max-width: 1025px) {
+    .mainSkl {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 639px) {
+    .mainSkl {
+        height: 94vh;
+    }
+}

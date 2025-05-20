@@ -113,8 +113,6 @@
     margin-left: auto;
     margin-right: 0.5em;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .expandText:hover {
@@ -124,6 +122,8 @@
 
 .expandText::before {
     content: "Show More";
+    display: inline-block;
+    min-width: max-content;
 }
 
 .expandText:checked::before {

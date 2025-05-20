@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import useAuth from '@/hooks/useAuth';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import { GridLoader } from 'react-spinners';
 
 export default function ProtectRoutes({ children, loader }) {
   const { accessToken, loading } = useAuth();
@@ -14,8 +15,16 @@ export default function ProtectRoutes({ children, loader }) {
     }
   }, [accessToken, loading]);
 
+  const loaderStyle = {
+    display: 'flex', 
+    justifyContent:'center', 
+    alignItems:'center',
+    height: '100vh',
+    width: '100%'
+  }
+
   if (loading) {
-    return loader || <div>Loading...</div>;
+    return loader || <div style={loaderStyle}><GridLoader /></div>;
   }
 
   if (!accessToken) {

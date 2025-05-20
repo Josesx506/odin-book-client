@@ -1,7 +1,10 @@
 import LandingPage from "@/components/LandingPage";
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
-    <LandingPage />
+    <Suspense fallback={<div>Loading landing page...</div>}>
+      <LandingPage />
+    </Suspense>
   );
 }

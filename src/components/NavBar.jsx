@@ -82,7 +82,7 @@ export default function NavBar() {
           <Link className={`${styles.mobNavLink} ${pathname === profileRoute ? styles.active : ''}`} href={profileRoute}>
             <MdOutlinePerson />
           </Link>
-          <Link className={`${styles.mobNavLink} ${pathname === '/messages' ? styles.active : ''}`} href={'#'}>
+          <Link className={`${styles.mobNavLink} ${pathname === '/messages' ? styles.active : ''}`} href={'/messages'}>
             <MdOutlineEmail />
           </Link>
           <Link className={styles.mobNavLink} href={'#'} onClick={onSignout}>

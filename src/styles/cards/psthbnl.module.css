@@ -18,7 +18,7 @@
     width: 100%;
     &:hover {
         cursor: pointer;
-        background-color: rgb(247,247,247)
+        background-color: var(--accent-clr)
     }
 }
 
@@ -61,6 +61,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 40%;
+    color: var(--foreground);
 
     &:hover {
         text-shadow: 0 0 1.0px currentColor;
@@ -96,7 +97,7 @@
     width: 100%;
     bottom: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, transparent, white);
+    background: linear-gradient(to bottom, transparent, var(--accent-clr));
 }
 
 .postBodyText + div {
@@ -121,7 +122,7 @@
 }
 
 .expandText:hover {
-    background-color: rgb(247,247,247);
+    background-color: var(--accent-clr);
     text-decoration: underline;
 }
 

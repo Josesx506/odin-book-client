@@ -29,7 +29,6 @@
 .searchRstsCntr {
     display: flex;
     flex-direction: column;
-    background-color: white;
     gap: 0.3em;
     width: 100%;
     top: 100%;

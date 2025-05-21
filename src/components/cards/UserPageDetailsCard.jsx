@@ -20,7 +20,7 @@ export default function UserPageDetailsCard({
 
   const title = fullname;
   const subtitle = `${numPosts} post${numPosts===1 ? '' : 's'}`
-  const btnStyle = { padding: '0.25em 0.7em', borderRadius: '1em', marginLeft: 'auto' };
+  const btnStyle = { padding: '0.25em 0.7em', borderRadius: '1em', marginLeft: 'auto', color:'var(--foreground)' };
 
   function toggleModal(e) {
     if (e) {

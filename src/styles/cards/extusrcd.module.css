@@ -5,7 +5,7 @@
     padding: 0.4em 0.5em;
     width: 100%;
     &:hover {
-        background-color: rgb(231, 231, 232);
+        background-color: var(--accent-clr);
         cursor: pointer;
     }
 }
@@ -54,7 +54,7 @@
 
 .fullname {
     font-weight: 600;
-    color: black;
+    color: var(--foreground);
     &:hover {
         text-decoration: underline;
         cursor: pointer;

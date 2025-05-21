@@ -19,7 +19,7 @@
 
     &:hover {
         cursor: pointer;
-        background-color: rgb(231, 231, 232);
+        background-color: var(--accent-clr);
     }
 }
 
@@ -44,7 +44,7 @@
 
 .fullname {
     font-weight: 600;
-    color: black;
+    color: var(--foreground);
 }
 
 .logoutPopup {

@@ -50,7 +50,7 @@
 .names {
     color: rgb(92, 92, 92);
     & h3 {
-        color: black;
+        color: var(--foreground);
         padding-bottom: 0.3em;
     }
     & div {
@@ -79,7 +79,7 @@
 
     & a>span {
         font-weight: bold;
-        color: black;
+        color: var(--foreground);
     }
 
     & a:hover {

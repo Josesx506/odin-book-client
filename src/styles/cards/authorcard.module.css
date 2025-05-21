@@ -27,7 +27,7 @@
 
 .fullname {
     font-weight: 600;
-    color: black;
+    color: var(--foreground);
     &:hover {
         text-decoration: underline;
         cursor: pointer;
